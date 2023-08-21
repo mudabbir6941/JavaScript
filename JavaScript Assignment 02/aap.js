@@ -19,7 +19,7 @@
 
 //<-----------------------------Assignment 02 Q_02------------------------->
 
-var a =2,b = 1;
+// var a =2,b = 1;
 
 // --a;
 // document.write("Result of Variable a After execution of --a will be "+a)
@@ -65,23 +65,39 @@ var a =2,b = 1;
 
 
 //<-----------------------------Assignment 02 Q_05------------------------->
-// let subject01 = prompt("Enter Name of 1st Subject");
-// let subject02 = prompt("Enter Name of 2nd Subject");
-// let subject03 = prompt("Enter Name of 3rd Subject");
-// var total_marks = 100;
+
+var total_marks = 100;
+var totalm = 300;
+let subject01_Name = prompt("Enter Name of 1st Subject");
+let subject02_Name = prompt("Enter Name of 2nd Subject");
+let subject03_Name = prompt("Enter Name of 3rd Subject");
 
 
-// let subject_marks1 = parseFloat(prompt("Enter Marks Obtain of 1st Subject"));
-// let subject_marks2 = parseFloat(prompt("Enter Marks Obtain of 2nd Subject"));
-// let subject_marks3 = parseFloat(prompt("Enter Marks Obtain of 3rd Subject"));
-// var percentage01 = (subject_marks1/total_marks)*100;
-// var percentage02 = (subject_marks2/total_marks)*100;
-// var percentage03 = (subject_marks3/total_marks)*100;
-// var subjtotal = subject_marks1+subject_marks2+subject_marks3;
-// var totalm = 300;
-// var totalpercent = (subjtotal/totalm)*100;
-// document.write("<b>Subject  Total Marks    Obtain Marks   Percentage</b> <br><br>"+subject01+" "+total_marks+" "+" "+subject_marks1+" "+" "+percentage01+"%<br>"+"<br>"+subject02+" "+total_marks+" "+" "+subject_marks2+" "+" "+percentage02+"%"+"<br>"+"<br>"+subject03+" "+total_marks+" "+" "+subject_marks3+" "+" "+percentage03+"%"+"<br>");
-// document.write("<br>"+"<br><b>"+totalm+" "+subjtotal+" "+" "+totalpercent+"%"+"<br></b>")
+
+let subject1_Obtainmarks = parseFloat(prompt("Enter Marks Obtain of 1st Subject"));
+let subject2_Obtainmarks = parseFloat(prompt("Enter Marks Obtain of 2nd Subject"));
+let subject3_Obtainmarks = parseFloat(prompt("Enter Marks Obtain of 3rd Subject"));
+
+function subject_Sum(sub01, sub02, sub03)
+{
+    var sum = sub01+sub02+sub03;
+    return sum;
+}
+var total = subject_Sum(subject1_Obtainmarks,subject2_Obtainmarks,subject3_Obtainmarks);
+function percentage(subtotal)
+{
+    var per = subtotal/totalm*100;
+    document.write(per);
+    
+}
+var percentage01 = (subject1_Obtainmarks/total_marks)*100;
+var percentage02 = (subject2_Obtainmarks/total_marks)*100;
+var percentage03 = (subject3_Obtainmarks/total_marks)*100;
+var subjtotal = subject1_Obtainmarks+subject2_Obtainmarks+subject3_Obtainmarks;
+
+var totalpercent = (subjtotal/totalm)*100;
+document.write("<b>Subject  Total Marks    Obtain Marks   Percentage</b> <br><br>"+subject01_Name+" "+total_marks+" "+" "+subject1_Obtainmarks+" "+" "+percentage01+"%<br>"+"<br>"+subject02_Name+" "+total_marks+" "+" "+subject2_Obtainmarks+" "+" "+percentage02+"%"+"<br>"+"<br>"+subject03_Name+" "+total_marks+" "+" "+subject3_Obtainmarks+" "+" "+percentage03+"%"+"<br>");
+document.write("<br>"+"<br><b>"+totalm+" "+subjtotal+" "+" "+percentage()+"%"+"<br></b>")
 
 
 
