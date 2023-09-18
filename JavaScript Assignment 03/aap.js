@@ -62,21 +62,6 @@
 //  document.write(colorNameArray);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // let a = prompt("Enter Variable Value");
 // // document.write("Result:<br> The Value of Variable a ="+a+"<br>......................................");
 // // ++a;
